@@ -1,6 +1,8 @@
 import { Server } from "socket.io";
-
-const io = new Server(9000, {
+import dotenv from "dotenv";
+dotenv.config();
+const PORT = process.env.PORT;
+const io = new Server(PORT, {
   cors: {
     origin: "*",
   },
